@@ -9,12 +9,12 @@ public:
     Node *next;
 };
 
-class List
+class SingleLinkedList
 {
     Node *START;
 
 public:
-    List()
+    SingleLinkedList()
     {
         START = NULL;
     }
@@ -48,7 +48,18 @@ public:
             if (nim == current->noMhs)
             {
                 cout << "\nDuplikasi noMhs tidak diijinkan\n";
+                return;
             }
+            previous = current;
+            current = current->next;
         }
-    
+
+        previous->next = current;
+        previous->next = nodeBaru;
+    }
+
+    bool listEmpty() 
+    {
+        return (START == NULL);
+    }
 }
