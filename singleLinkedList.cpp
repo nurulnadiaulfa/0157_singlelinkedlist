@@ -39,31 +39,5 @@ public:
             START = nodeBaru;
             return;
         }
-
-        Node *previous = START;
-        Node *current = START;
-
-        if (START == NULL || nim <= START->noMhs)
-        {
-            if ((START != NULL ) && (nim == START ->noMhs))
-            {
-                cout << "\nDuplikasi noMhs tidak diijinkan\n";
-                return;
-            }
-            nodeBaru->next = START;
-            START = nodeBaru;
-            return;
-        }
-
-        Node *previous = START;
-        Node *current = START;
-
-        while ((current != NULL) && (nim >= current->noMhs))
-        {
-            if (nim == current->noMhs)
-            {
-                cout << "\nDuplikasi noMhs tidak diijinkan\n";
-            }
-        }
-    }
+    
 }
